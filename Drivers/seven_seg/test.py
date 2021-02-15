@@ -1,4 +1,4 @@
-from seven_seg import decode
+from seven_seg import convert
 from time import sleep
 from machine import Pin
 
@@ -6,6 +6,6 @@ from machine import Pin
 
 while True:
     for i in range(10):
-        decode(i)
+        convert(i)
         sleep(1)
         
