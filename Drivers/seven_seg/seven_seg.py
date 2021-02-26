@@ -211,31 +211,28 @@ def decode(number):
 
 # set the register value into segment 
 def enable():
-    global pin_en          # enable pin number 
-    global REG1          
-    global REG2            # segment registers 
-    global REG3
-    global REG4
+    global pin_en,REG1,REG2,REG3,REG4       # enable pin number 
+    
     
     decode(REG1)
-    pin_en[0].high()
-    sleep(0.005)           # delay upto 5 ms
     pin_en[0].low()
+    sleep(0.005)           # delay upto 5 ms
+    pin_en[0].high()
     
     decode(REG2)
-    pin_en[1].high()
-    sleep(0.005)
     pin_en[1].low()
+    sleep(0.005)
+    pin_en[1].high()
     
     decode(REG3)
-    pin_en[2].high()
-    sleep(0.005)
     pin_en[2].low()
+    sleep(0.005)
+    pin_en[2].high()
     
     decode(REG4)
-    pin_en[3].high()
-    sleep(0.005)
     pin_en[3].low()
+    sleep(0.005)
+    pin_en[3].high()
     
 
 
